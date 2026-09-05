@@ -1,0 +1,39 @@
+name: Kachari
+
+options:
+  bundleIdPrefix: jp.ytkm
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "16.0"
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: 66S7ARYK93
+
+targets:
+  Kachari:
+    type: application
+    platform: iOS
+    sources:
+      - Kachari
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: 2
+        GENERATE_INFOPLIST_FILE: true
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: true
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+
+  KachariTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - KachariTests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: true
+    dependencies:
+      - target: Kachari

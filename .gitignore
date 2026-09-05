@@ -38,3 +38,8 @@ playground.xcworkspace
 
 # Swift Package Manager
 # Package.resolved
+
+# project
+*.xcodeproj
+*.xcworkspace
+*.pbxproj
